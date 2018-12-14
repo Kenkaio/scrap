@@ -1,0 +1,134 @@
+#presentation{
+    height: 100vh;
+    background-color: white;
+}
+
+.ml5 {
+  position: absolute;
+  top: 50%;
+  margin-top: -40px;
+  left: 50%;
+  margin-left: -286px;
+  font-weight: 300;
+  font-size: 4.5em;
+  color: rgb(143, 143, 143);
+}
+
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: rgb(143, 143, 143);
+  transform-origin: 0.5 0;
+}
+
+.ml5 .letters-mid {
+  font-family: Baskerville, "EB Garamond", serif;
+  font-style: italic;
+  font-weight: 400;
+  width: 1em;
+  margin-right: -0.1em;
+  margin-left: -0.1em;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
+
+.down{
+    color: white;
+    position: absolute;
+    bottom: 40px;
+    font-family: scrap, serif;
+    left: 50%;
+    margin-left: -104px;
+    font-size: 2em;
+    opacity: 0;
+}
+
+.down i{
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -14px;
+}
+
+.bubble1{
+    background-image: url('../images/Accueil/bulles1.png');
+    background-size: 100%;
+    width: 382px;
+    height: 388px;
+    opacity: 0;
+}
+
+.bubble2{
+    background-image: url('../images/Accueil/bulles2.png');
+    background-size: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -400px;
+    right: -400px;
+    width: 860px;
+    height: 807px;
+    opacity: 0;
+}
+
+/* menu */
+
+#menu{
+	height: 60px;
+	border: none;
+}
+
+#menu ul{
+    margin-top: 5px;
+}
+
+#menu ul a{
+	color: rgba(0, 0, 0, 0.6);
+	font-weight: bold;
+	transition: 0.8s;
+}
+
+#menu ul a:hover{
+	color: rgba(255, 255, 255, 1);
+	transition: 1s;
+}
+
+#menu ul .active a{
+	color: black;
+	background-color: transparent;
+}
+
+.drapeau{
+    width: 35px;
+    margin-top: -5px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.container-fluid{
+	padding: 0;
+}
