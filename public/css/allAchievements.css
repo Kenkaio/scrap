@@ -1,0 +1,27 @@
+.allPosts{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.contentAllPosts{
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    margin: 50px;
+    text-align: center;
+    z-index:1;
+}
+
+.imagesAllPosts img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.imagesAllPosts{
+    border: 1px solid white;
+    box-shadow: -10px 0 30px white;
+    border-radius: 5px;
+}
+

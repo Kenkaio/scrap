@@ -11,6 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="public/css/header.css" />
     <link rel="stylesheet" href="public/css/index.css" />
+    <link rel="stylesheet" href="public/css/achievements.css" />
+    <link rel="stylesheet" href="public/css/allAchievements.css" />
     <title>Le Scrap de Monique</title>
 </head>
 <body>
@@ -30,7 +32,7 @@
                 </h1>
                 <div class="down">
                     <p><?= VISITE; ?></p>
-                    <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                    <a href="#menu"><i class="fa fa-arrow-circle-down" id="arrowDown" aria-hidden="true"></i></a>
                 </div>
             </div>
             <nav id="menu" class="navbar navbar-default text-center">
@@ -43,26 +45,36 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a><?= MENU_ACCUEIL; ?></a></li>
-                        <li><a><?= MENU_REALISATIONS; ?></a></li>
+                        <li><a href="#achievements"><?= LAST_REAL; ?></a></li>
+                        <li><a href="#allAchievements"><?= MENU_REALISATIONS; ?></a></li>
                         <li><a><?= MENU_TECHNIQUES; ?></a></li>
                         <li><a><?= MENU_CONTACT; ?></a></li>
-                        <li><a href="index.php?lang=fr"><img class="drapeau" id='drapeauFr' src="public/images/Accueil/drapeauFr.jpg" alt="drapeau Francais"></a></li>
-                        <li><a href="index.php?lang=es"><img class="drapeau" id='drapeauEs' src="public/images/Accueil/drapeauEs.jpg" alt="drapeau Espagnole"></a></li>
+                        <li><a href="index.php?lang=fr" id="drapFr"><img class="drapeau" id='drapeauFr' src="public/images/Accueil/drapeauFr.jpg" alt="drapeau Francais"></a></li>
+                        <li><a href="index.php?lang=es" id="drapEs"><img class="drapeau" id='drapeauEs' src="public/images/Accueil/drapeauEs.jpg" alt="drapeau Espagnole"></a></li>
                     </ul>
                 </div>
             </nav>
         </section>
     </header>
     <!-- fin section header -->
+
     <section id="achievements">
         <div class="contentAchievements container">
-            <h1><?= MENU_REALISATIONS; ?></h1>
+            <h1 class="title"><?= LAST_REAL; ?></h1>
             <div class="posts">
-                <!-- contenu ajouté via php -->
+                <?php require('views/posts.php'); ?>
             </div>
         </div>
+    </section>
+    <!-- Fin section achievement -->
 
+    <section id="allAchievements">
+        <div class="contentAllAchievements container-fluid">
+            <h1 class="title"><?= MENU_REALISATIONS; ?></h1>
+            <div class="allPosts">
+                <?php require('views/allPosts.php'); ?>
+            </div>
+        </div>
     </section>
     <script src="public/js/accueil.js"></script>
 </body>

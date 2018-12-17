@@ -1,0 +1,47 @@
+#achievements{
+    position: relative;
+	padding-top: 40px;
+}
+
+.posts{
+    margin-bottom: 150px;
+}
+
+.contentPosts{
+    position: relative;
+    height: 400px;
+    display: flex;
+    margin-top: 50px;
+}
+
+.contentAllPost{
+    padding: 15px;
+    border: 1px solid white;
+    box-shadow: 0 0 30px white;
+    background-color: rgba(255, 255, 255, 0.5);
+    min-width: 700px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.imagesPosts, .contentAllPost{
+    display: none;
+}
+
+.imagesPosts img{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 0 30px white;
+    margin-right: 40px;
+    margin-left: -50px;
+    width: 400px;
+    height: 400px;
+}
+
+.titlesPosts{
+    font-size: 2em;
+}
+
+.textsPosts{
+    margin-top: 70px;
+}

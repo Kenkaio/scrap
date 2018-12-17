@@ -1,5 +1,61 @@
+$("html, body").animate({ scrollTop: 0 }, "slow");
+$('.flower1').css({
+    'position': 'absolute'
+});
+
+var positionMenuInPage = $('#menu').offset().top;
+$(window).scroll(
+    function () {
+        if ($(window).scrollTop() > positionMenuInPage) {
+            $('#menu').addClass("navbar-fixed-top");
+        } else {
+            $('#menu').removeClass("navbar-fixed-top");
+        }
+    }
+);
+
+
+var positionAchievementInPage = $("#achievements").offset().top;
+$(window).scroll(function() {
+    if ($(window).scrollTop() > (positionAchievementInPage-100)) {
+        $(".imagesPosts").fadeIn(2500);
+        $(".contentAllPost").fadeIn(2500);
+    }
+});
+
+
+
+$(".down a").on("click", function(e) {
+  e.preventDefault();
+  var hash = this.hash;
+  $("html, body").animate(
+    {
+      scrollTop: $(this.hash).offset().top
+    },
+    1000,
+    function() {
+      window.location.hash = hash;
+    }
+  );
+});
+
+$('li>a').on('click', function (e) {
+    if (this.id == 'drapFr' || this.id == "drapEs" ) {
+
+    }
+    else{
+        e.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 1000, function () {
+            window.location.hash = hash;
+        });
+    }
+});
 
 window.onload = function(){
+
     anime
         .timeline()
         .add({
@@ -52,7 +108,7 @@ window.onload = function(){
             "transition": "2s"
         });
         $("#presentation").css({
-            'background-color': 'rgb(39, 48, 64)',
+            'background-color': 'rgb(59, 68, 84)',
             "transition": "2s"
         });
     }, 1500);
@@ -66,6 +122,9 @@ window.onload = function(){
         $(".down").css({
             "opacity": '1',
             "transition": "1s"
+        });
+        $('body').css({
+            'overflow-y': 'visible'
         });
     }, 3500);
 

@@ -8,24 +8,15 @@ function redirect_to($url){
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-require('modelCoBdd.php');
 
-if (isset($_POST['subject'])) {
+function posts(){
     $db = dbConnect();
-    $message = htmlspecialchars($_POST['message']);
-    $from = htmlspecialchars($_POST['mail']);
-    $subject = htmlspecialchars($_POST['subject']);
-    $nom = htmlspecialchars($_POST['nom']);
-    $headers = 'From: '. $from ."\n" .
-    'Reply-To: matcrid@hotmail.fr' . "\n" .
-    'X-Mailer: PHP/' . phpversion();
-    $req = $db->prepare('INSERT INTO mails (name, mail, subject, text) VALUES (:expe, :mail, :subject, :text)');
-    $req->execute(array(
-        'expe' => $nom,
-        'mail' => $from,
-        'subject' => $subject,
-        'text' => $message
-    ));
-    mail('matcrid@hotmail.fr', $subject, $message);
-    redirect_to('location:../index.php');
+    $req = $db->query('SELECT * FROM articles ORDER BY id DESC LIMIT 1');
+    return $req;
+}
+
+function allPosts(){
+    $db = dbConnect();
+    $req = $db->query('SELECT * FROM articles ORDER BY id DESC');
+    return $req;
 }
